@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/script.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Speed Typing Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-    
+<body id="game-body">
+  <div id="container-game">
+    <input type="text" class="typing-input">
+    <div class="output-box">
+      <div class="typed-text">
+        <p></p>
+      </div>
+      <div class="output">
+        <ul class="result-info">
+          <li class="time-left">
+            <p>Time Remaining:</p>
+            <span><b>60</b>s</span>
+          </li>
+          <li class="errors">
+            <p>Errors:</p>
+            <span>0</span>
+          </li>
+          <li class="wpm">
+            <p>Words per Minute:</p>
+            <span>0</span>
+          </li>
+          <li class="cpm">
+            <p>Characters per Minute:</p>
+            <span>0</span>
+          </li>
+        </ul>
+        <button>Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/texts.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
