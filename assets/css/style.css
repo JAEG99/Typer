@@ -1,18 +1,37 @@
+/* Reset default styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Background */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f3f8;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
   background-image: url("../images/keyboard.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 #container {
   background: rgb(166, 203, 224);
@@ -22,83 +41,260 @@ body {
   text-align: center;
   width: 80%;
   max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header and Footer Styles */
+.header-container, .footer-container {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5f2f2;
+  color: #0e0d0d;
+  width: 100%;
+}
+
+.header-container h1 a {
+  color: #252323;
+  text-decoration: none;
+  font-size: 38px;
+  position: relative; 
+}
+
+.header-container h1 a:hover {
+  color: #138496;
+}
+
+.footer-container p {
+  font-size: 14px;
   
 }
 
-header {
+/* Game Page Styles */
+#game-body {
+  background: linear-gradient(to right, #12c2e98c, #c471ed98, #f64f5a83);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+   transition: background-color 0.5s ease;
+}
+#game-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin: px 0;
+  transition: color 0.3s ease;
+}
+
+#game-heading {
+  display: block;
+  margin: 20px auto; 
+  width: 200px;  
+}
+
+#game-heading a:hover {
+  color: #138496;
+}
+
+/* Container Styles */
+#container-game {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  padding: 30px;
+  margin: 0 auto;
+  position: relative;
+  margin: 20px auto;
+}
+
+#container-game:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Typing Input Styles */
+.typing-input {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.typing-input:focus {
+  border-color: #007bff;
+}
+
+/* Typed Text Styles */
+.typed-text {
+  overflow: hidden;
+  max-height: 256px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.typed-text p span {
+  position: relative;
+  color: #007bff;
+}
+
+.typed-text p span.incorrect {
+  color: red;
+}
+
+.typed-text p span.correct {
+  color: green;
+}
+
+/* Result Info Styles */
+.result-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.result-info li {
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-info p {
+  font-size: 16px;
+  color: #555555;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.result-info span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 5px;
+}
+
+/* Button Styles */
+.output button {
+  background-color: #b81788;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: #333;
+  border-style: double;
+  margin-top: 20px;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.output button:hover {
+  background-color: #138496;
+}
+
+.output button a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+/* Footer Container Styles */
+.footer-container {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+ 
+}
+
+.footer-container p {
+  font-size: 14px;
+}
+
+/* Landing Container Styles */
+.landing-container {
+  background: linear-gradient(to bottom, #b817884d, #1384967e);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  padding: 0; 
+  margin: 0; 
+  opacity: 10;
+  flex: 1; 
+}
+
+.landing-content {
+  text-align: center;
+  color: #fff;
+}
+
+.landing-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.landing-content p {
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
-h1 {
+.landing-content button {
+  background-color: #fff;
   color: #333;
-  font-size: 36px;
-  margin-bottom: 5px;
-}
-
-p {
-  color: #777;
-  font-size: 18px;
-  margin: 0;
-}
-
-button {
-  background-color: #007bff;
   border: none;
   border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 18px;
   padding: 15px 40px;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.landing-content button:hover {
+  background-color: #138496;
+  color: #fff;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #container-game {
+    width: 90%;
+  }
 
-/* Game Specific CSS */
+  .result-info li {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
 
-#game-body {
-
-  font-family: 'Roboto', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f3f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to right,
-                    #12c2e98c, #c471ed98, #f64f5a83);
-  background-repeat: no-repeat;
-  background-size: cover;
-  
+  .output button a,
+  .output button a:hover,
+  .output button a:focus,
+  .output button a:active {
+    color: black !important;
+    text-decoration: none !important;
+  }
 }
-
-#container-game {
-
-  background: rgb(166, 203, 224);
-  border-radius: 15px;
-  box-shadow: 0 26px 42px rgba(0, 0, 0, 0.11);
-  padding: 40px;
-  text-align: center;
-  width: 80%;
-  max-width: 600px;
-  border: 1px solid #757373;
-}
-
-.typing-input {
-  opacity: 0;
-  z-index: -999;
-  position: absolute;
-}
-
-.output-box {
-  padding: 13px 20px 0;
-  border-radius: 10px;
-  border: 1px solid #757373;
-}
-
