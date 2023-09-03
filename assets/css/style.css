@@ -23,6 +23,18 @@ body {
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
 }
+a {
+  color: #0e0d0d;
+  text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the color to match your background */
+}
 
 @keyframes fadeIn {
   0% {
@@ -47,7 +59,7 @@ body {
 /* Header and Footer Styles */
 .header-container, .footer-container {
   text-align: center;
-  padding: 20px 0;
+  
   background-color: #f5f2f2;
   color: #0e0d0d;
   width: 100%;
@@ -95,8 +107,16 @@ body {
   width: 200px;  
 }
 
-#game-heading a:hover {
-  color: #138496;
+#game-heading img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3 ease, opacity 0.3s ease, box-shadow 0.3 ease;
+}
+
+#game-heading:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 8px 16px rgba(101, 210, 230, 0.2);
 }
 
 /* Container Styles */
@@ -211,13 +231,15 @@ body {
 }
 
 .output button:hover {
-  background-color: #138496;
+  background-color: #3ba0afd8;
 }
 
 .output button a {
   color: black !important;
   text-decoration: none !important;
 }
+
+
 
 /* Footer Container Styles */
 .footer-container {
@@ -230,6 +252,24 @@ body {
 
 .footer-container p {
   font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #fcfcfc;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #138496;
 }
 
 /* Landing Container Styles */
