@@ -13,11 +13,23 @@ const paragraphs = [
     cmpTag = document.querySelector(".cmp span");
 
     function loadParagraph() {
-
-    }
+      const ranIndex = Math.floor(Math.random() * paragraphs.length);
+      typingText.innerHTML = "";
+      paragraphs[runIndex].split(" ").forEach(function((char)  => {
+        let span = `<span>${char}</span>`;
+        typingText.innerHTML += span;
+    });
+    typingText.querySelectorAll("span").classList.add("active");
+    document.addEventListener("Keydown", () => inputField.focus());
+    typingText.addEventListener("click", () => inputField.focus());
+  }
 
     function initTyping() {
+      let characters = typingText.querySelectorAll("span");
+      let typedChar = inpField.value.split(" ")[charIndex];
+      if (charIndex < characters.length - 1 && timeleft > 0) {
 
+      }
     }
 
     function initTimer() {
@@ -29,4 +41,4 @@ const paragraphs = [
     }
 
     loadParagraph();
-
+    
