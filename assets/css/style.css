@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-image: url("../images/keyboard.jpg");
+  background-image: url("/assets/images/keyboard.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
@@ -54,6 +54,7 @@ body::-webkit-scrollbar-thumb {
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
+
 }
 
 /* Header and Footer Styles */
@@ -164,7 +165,7 @@ body::-webkit-scrollbar-thumb {
 
 .typed-text p span {
   position: relative;
-  color: #007bff;
+  color: #000000;
 }
 
 .typed-text p span.incorrect {
@@ -177,7 +178,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Result Info Styles */
 .result-info {
-  display: flex;
+  
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -208,9 +209,8 @@ body::-webkit-scrollbar-thumb {
 .result-info span {
   display: block;
   font-size: 18px;
-  font-weight: 600;
   color: #333333;
-  margin-top: 5px;
+  margin-top: auto;
 }
 
 /* Button Styles */
@@ -244,9 +244,13 @@ body::-webkit-scrollbar-thumb {
 /* Footer Container Styles */
 .footer-container {
   text-align: center;
-  padding: 20px 0;
+  padding: 5px 0;
   background-color: #333;
   color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
  
 }
 
@@ -289,6 +293,7 @@ body::-webkit-scrollbar-thumb {
 .landing-content {
   text-align: center;
   color: #fff;
+  ;
 }
 
 .landing-content h2 {
