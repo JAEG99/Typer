@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-image: url("/assets/images/keyboard.jpg");
+  background-image: url("assets/images/keyboard.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
@@ -46,7 +46,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
+/* Container Styles */
 #container {
   background: rgb(166, 203, 224);
   border-radius: 15px;
@@ -83,6 +83,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
   
 }
+
 /* Style the modal */
 .modal {
   display: none;
