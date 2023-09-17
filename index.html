@@ -18,7 +18,7 @@
     <div class="landing-content">
       <h2>Welcome to Typer</h2>
       <p>Test your typing speed and accuracy with our fun and interactive game!</p>
-      <button id="startButton"><a href="game.html" style="color: black;">Start Test</a></button>
+      <button id="startButton">Start Test</button>
     </div>
   </div>
   <footer class="footer-container">
@@ -31,5 +31,10 @@
     <p>Contact: Typer@email.com</p>
   </footer>
   <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById("startButton").addEventListener("click", function() {
+      window.location.href = "game.html";
+    });
+  </script>
 </body>
 </html>

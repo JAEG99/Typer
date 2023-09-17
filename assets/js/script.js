@@ -7,6 +7,7 @@ const paragraphs = [
 
   const typingText = document.querySelector(".typed-text p"),
   inpField = document.querySelector(".typing-input"),
+  
   tryAgainBtn = document.querySelector("button"),
   timeTag = document.querySelector(".time-left span b"),
   mistakeTag = document.querySelector(".errors span"),
@@ -29,6 +30,20 @@ function loadParagraph() {
   typingText.querySelectorAll("span")[0].classList.add("active");
   document.addEventListener("keydown", () => inpField.focus());
   typingText.addEventListener("click", () => inpField.focus());
+}
+let timerReachedZero = false;
+
+function calculateAccuracy() {
+  const accuracyLabel = document.querySelector(".errors p");
+  const accuracy = ((totalCharacters - mistakes) / totalCharacters) * 100;
+
+  accuracyLabel.textContent = "Accuracy:";
+
+  if (timerReachedZero) {
+    accuracyLabel.textContent = "Mistakes:";
+  }
+
+  mistakeTag.textContent = `${accuracy.toFixed(2)}%`;
 }
 
 function initTyping() {
@@ -81,13 +96,24 @@ function initTimer() {
     wpmTag.innerText = wpm;
   } else {
     clearInterval(timer);
+    timerReachedZero = true;
+    calculateAccuracy();
   }
 }
 
 function calculateAccuracy() {
+  const accuracyLabel = document.querySelector(".errors p");
   const accuracy = ((totalCharacters - mistakes) / totalCharacters) * 100;
-  mistakeTag.innerText = `${accuracy.toFixed(2)}%`;
+
+  if (timerReachedZero) {
+    accuracyLabel.textContent = "Accuracy:";
+  } else {
+    accuracyLabel.textContent = "Mistakes:";
+  }
+
+  mistakeTag.textContent = `${accuracy.toFixed(2)}%`;
 }
+
 
 function resetGame() {
   loadParagraph();
@@ -100,6 +126,14 @@ function resetGame() {
   mistakeTag.innerText = 0;
   cpmTag.innerText = 0;
 }
+
+inpField.addEventListener("keydown", function (e) {
+  if (e.keyCode === 8) {
+    e.preventDefault(); 
+  }
+});
+
+
 
 loadParagraph();
 inpField.addEventListener("input", initTyping);

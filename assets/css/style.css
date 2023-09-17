@@ -45,6 +45,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+
+
 #container {
   background: rgb(166, 203, 224);
   border-radius: 15px;
@@ -81,7 +83,39 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
   
 }
+/* Style the modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
 
+/* Style the modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  text-align: center;
+}
+
+/* Style the close button */
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
 /* Game Page Styles */
 #game-body {
   background: linear-gradient(to right, #12c2e98c, #c471ed98, #f64f5a83);
@@ -98,7 +132,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 36px;
   font-weight: bold;
   color: #333333;
-  margin: px 0;
   transition: color 0.3s ease;
 }
 
@@ -111,7 +144,7 @@ body::-webkit-scrollbar-thumb {
 #game-heading img {
   max-width: 100%;
   height: auto;
-  transition: transform 0.3 ease, opacity 0.3s ease, box-shadow 0.3 ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #game-heading:hover img {
@@ -161,6 +194,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 18px;
   line-height: 1.6;
   color: #333333;
+  text-align: justify;
 }
 
 .typed-text p span {
@@ -177,6 +211,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Result Info Styles */
+
+ul.result-info {
+  padding-left: 0;
+}
 .result-info {
   
   justify-content: space-between;
@@ -342,4 +380,10 @@ body::-webkit-scrollbar-thumb {
     color: black !important;
     text-decoration: none !important;
   }
+
+  .footer-container {
+    position: relative; /* Non-sticky positioning */
+    margin-top: 20px; /* Adjust the margin to control the spacing between body and footer */
+  }
+
 }
