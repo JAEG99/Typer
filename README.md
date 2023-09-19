@@ -120,8 +120,8 @@ Typer site is set up to be welcoming and easy to use. The landing page is a very
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - provides the styling.
 * [Bootstrap](https://getbootstrap.com/) -  provided the scaling and box format.
 * [Balsamiq](https://balsamiq.com/wireframes/) - used to create the wireframes.
-* [Gitpod](https://www.gitpod.io/#get-started) - used to deploy the website.
 * [Github](https://github.com/) - used to host and edit the website.
+* [Visual Studio Code](https://code.visualstudio.com/) - was used when coding.
 
 [Back to top](#contents)
 
@@ -174,6 +174,7 @@ The method for cloning a project from GitHub is below:
 * The accuracy idea came from [Livechat](https://www.livechat.com/typing-speed-test/#/).
 * The logo was made with [Adobe](https://www.adobe.com/express/create/logo).
 * HTML, CSS, and JavaScript help came from [W3Schools](https://www.w3schools.com/).
+*The sound was from [Youtube](https://www.youtube.com/watch?v=w3MevX_jRQw&ab_channel=SoundEffects)
 
 ### Media
 * The photos all came from the developer, [James Gilliland].

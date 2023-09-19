@@ -67,6 +67,10 @@ The Typer website underwent testing on various browsers, namely Google Chrome, M
 
 
 ## Known Bugs
+
+    * On mobile devices you can sue the autocorrect to skip some of the spelling but the JS will not detect it and put you behind where you are.
+
+    * The rest button can be used to keep in getting paragraphs
 * ### Resolved
 
     * During validation two bugs became known during the validation stage, a brief description is below:

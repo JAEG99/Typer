@@ -1,9 +1,10 @@
+if (window.location.pathname.endsWith("game.html")) {
 const paragraphs = [
   // Array of paragraphs for typing challenge
-    "The sun dipped below the horizon, casting long shadows across the tranquil landscape. The air was cool and crisp, carrying with it the faint scent of pine trees. As the stars began to twinkle in the evening sky, a sense of calm settled over the world.",
-    "The bustling city streets were alive with the sounds of honking horns and chattering pedestrians. Neon signs illuminated the night, creating a colorful tapestry of light and motion. Amidst the chaos, a sense of excitement permeated the air, promising adventures yet to be discovered.",
-    "In a quiet corner of the library, an old book sat on a dusty shelf, its pages yellowed with age. As the librarian turned its delicate pages, a world of forgotten stories and ancient wisdom unfolded. Each word seemed to carry a piece of history, waiting to be cherished once more.",
-    "The waves crashed against the shore with a rhythmic cadence, as seagulls soared gracefully through the salty breeze. The sand beneath my feet was warm and soothing, a reminder of nature's embrace. With every step, I felt a deeper connection to the vast ocean before me."
+    "In the heart of the dense, emerald forest, ancient trees stood tall, their branches intertwined in a dance that had lasted for centuries. Shafts of golden sunlight pierced through the thick canopy, illuminating the moss-covered ground below. As I walked deeper into this enchanted woodland, I felt a sense of wonder and reverence for the natural world.",
+    "Amidst the bustling streets of the vibrant metropolis, skyscrapers reached for the heavens, their glass facades reflecting the urban symphony of life. The city's diverse inhabitants hurried along, each with their own story to tell. It was a place where dreams were born and ambitions soared, a microcosm of human existence.",
+    "High atop the rugged mountains, a lonely mountain goat navigated treacherous cliffs with unmatched grace. The air was thin and crisp, and the view from this lofty perch was breathtaking. I marveled at the sheer grandeur of the world below, a reminder of nature's indomitable spirit.",
+    "In the quiet solitude of a dimly lit library, rows upon rows of ancient books filled the shelves. Each tome held the collective knowledge and wisdom of generations long past. As I opened one of these weathered volumes, I was transported to distant lands and eras, where history came alive through the printed word."
   ];
 
   const typingText = document.querySelector(".typed-text p"), // Element to display the typing text
@@ -91,10 +92,11 @@ function initTyping() {
   }
 }
 
+
 // Function to calculate accuracy
 function calculateAccuracy() {
   const accuracyLabel = document.querySelector(".errors p");
-  const accuracy = (mistakes / (charIndex || 1)) * 100; 
+  const accuracy = ((charIndex - mistakes) / charIndex) * 100; 
 
   accuracyLabel.textContent = "Mistakes:";
 
@@ -104,6 +106,13 @@ function calculateAccuracy() {
 
   mistakeTag.textContent = `${accuracy.toFixed(2)}%`;
 }
+
+// Function to play the timer sound
+function playTimerSound() {
+  const timerSound = document.getElementById("timerSound");
+  timerSound.play();
+}
+
 
 // Function to calculate and update the timer
 function initTimer() {
@@ -116,6 +125,9 @@ function initTimer() {
     clearInterval(timer);
     timerReachedZero = true;
     calculateAccuracy(document.getElementById("inputText"));
+    playTimerSound();
+
+  
   }
 }
 
@@ -133,12 +145,13 @@ function resetGame() {
 }
 
 // Event listener for handling backspace key (prevent default behavior)
-inpField.addEventListener("keydown", function (e) {
-  if (e.keyCode === 8) {
-    e.preventDefault(); 
-  }
-});
-
+if (inpField) { // Check if inpField exists on the current page
+  inpField.addEventListener("keydown", function (e) {
+    if (e.keyCode === 8) {
+      e.preventDefault();
+    }
+  });
+}
 
 // Load an initial paragraph when the page loads
 loadParagraph();
@@ -147,4 +160,14 @@ loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
 
-  
+}
+// JS for the button on the landing page
+document.addEventListener("DOMContentLoaded", function () {
+  const startButton = document.getElementById("startButton");
+
+  if (startButton) {
+    startButton.addEventListener("click", function () {
+      window.location.href = "game.html";
+    });
+  }
+});
