@@ -163,13 +163,47 @@ body::-webkit-scrollbar-thumb {
   max-width: 800px;
   padding: 30px;
   margin: 0 auto;
-  position: relative;
-  margin: 20px auto;
+  margin-top: 15px;
+  margin-bottom: 80px; /* Adjust the margin to make room for the footer */
 }
+With these changes, the footer will be positioned at the bottom of the page, below the container-game. You may need to adjust the margin-bottom property of the #container-game to make sure there's enough space for the footer.
+
+
+
+
+
+
 
 #container-game:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
+}
+
+#difficulty {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#difficulty:focus {
+  border-color: #007bff;
+}
+
+#difficulty::after {
+  content: '\f107'; /* Unicode for a down arrow (you may need to adjust this) */
+  font-family: 'Font Awesome'; /* Use Font Awesome for arrow icons */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  pointer-events: none;
+  color: #555555;
+  font-size: 16px;
 }
 
 /* Typing Input Styles */
@@ -205,10 +239,12 @@ body::-webkit-scrollbar-thumb {
 
 .typed-text p span.incorrect {
   color: red;
+  background-color: #693d3d;
 }
 
 .typed-text p span.correct {
   color: green;
+  background-color: rgb(161, 185, 161);
 }
 
 
@@ -279,19 +315,64 @@ ul.result-info {
   text-decoration: none !important;
 }
 
+/* Style for High Scores Section */
+#highScoresList {
+  list-style: none;
+  padding: 0;
+}
 
+#highScoresList li {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#highScoresList li:hover {
+  background-color: #e0e0e0;
+}
+
+#highScoresList li::before {
+  content: "🏆"; /* You can use any emoji or icon for a trophy */
+  margin-right: 10px;
+  font-size: 24px;
+  color: #b81788; /* Trophy color */
+}
+
+#highScoresList li span {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #555555;
+  text-align: left;
+}
+
+#highScoresList li b {
+  font-size: 18px;
+  color: #333333;
+  text-align: right;
+}
+
+#highScoresList li span, #highScoresList li b {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Footer Container Styles */
 .footer-container {
   text-align: center;
-  padding: 5px 0;
+  padding: 20px 0;
   background-color: #333;
   color: #fff;
-  position: fixed;
-  bottom: 0;
   width: 100%;
- 
- 
+  position: relative;
+  bottom: 0;
 }
 
 .footer-container p {
@@ -384,6 +465,13 @@ ul.result-info {
     text-decoration: none !important;
   }
 
-  
+  @media (max-width: 768px) {
+    .footer-container {   
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+      width: 100%;
+    }
+  }
 
 }
