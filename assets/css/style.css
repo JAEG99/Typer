@@ -28,13 +28,6 @@ a {
   text-decoration: none;
 }
 
-body::-webkit-scrollbar {
-  width: 0.5em; /* Adjust the width as needed */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Set the color to match your background */
-}
 
 @keyframes fadeIn {
   0% {
@@ -117,6 +110,23 @@ body::-webkit-scrollbar-thumb {
 .close:hover {
   color: red;
 }
+
+.button {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #ffffff; /* Button background color */
+  color: #000000; /* Text color */
+  text-decoration: none; /* Remove underlines from links */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  text-shadow: none; /* Remove any text shadow */
+}
+
+.button:hover {
+  background-color: #cf85bf; /* Darker color on hover */
+}
+
 /* Game Page Styles */
 #game-body {
   background: linear-gradient(to right, #12c2e98c, #c471ed98, #f64f5a83);
@@ -166,13 +176,6 @@ body::-webkit-scrollbar-thumb {
   margin-top: 15px;
   margin-bottom: 80px; /* Adjust the margin to make room for the footer */
 }
-With these changes, the footer will be positioned at the bottom of the page, below the container-game. You may need to adjust the margin-bottom property of the #container-game to make sure there's enough space for the footer.
-
-
-
-
-
-
 
 #container-game:hover {
   transform: translateY(-5px);
@@ -407,7 +410,6 @@ ul.result-info {
   min-height: calc(100vh - 150px);
   padding: 0; 
   margin: 0; 
-  opacity: 10;
   flex: 1; 
 }
 

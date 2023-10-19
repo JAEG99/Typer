@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add a title element here -->
+  <title>Speed Typing Challenge</title>
   <!-- Link to your custom CSS stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Link to Font Awesome icons -->
@@ -12,9 +14,6 @@
   <!-- Link to Favico -->
   <link rel="icon" type="image/x-icon" href="assets/images/Typer-logos_white.ico" />
   <!-- Link to Sound -->
-  <audio id="timerSound" src="assets/sounds/beep.mp3" preload="auto"></audio>
-  <title>Speed Typing Challenge</title> <!-- Page title -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body id="game-body">
   <header class="header-container">
@@ -33,7 +32,7 @@
       <option value="hard">Hard</option>
     </select>
     <!-- Input field where the user types -->
-    <input class="typing-input" type="text" id="inputText" placeholder="Start typing..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
+    <input class="typing-input" type="text" id="inputText" placeholder="Start typing..." autocomplete="off" spellcheck="false">
     <div class="output-box">
       <div class="typed-text">
         <!-- Element to display the typing text -->
@@ -88,5 +87,7 @@
   </footer>
   <!-- Link to your JavaScript file -->
   <script src="assets/js/script.js"></script>
+
+  <audio id="timerSound" src="assets/sounds/beep.mp3" preload="auto"></audio>
 </body>
 </html>
