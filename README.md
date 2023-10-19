@@ -94,6 +94,8 @@ Typer site is set up to be welcoming and easy to use. The landing page is a very
     * This is the section for the main game of the site. The typing game will show a paragraph that will be generated from an array within the JS. This will then be static until the user presses the restart button. The program will begin the 60-second countdown when the user starts their typing.
     * When the 60 seconds is up, the user will be able to see their CPM, WPM, and their Accuracy in a percentage.
     * They will then be able to press the restart button to generate a new paragraph to try again.
+    * The game also has difficulty options.
+    * The game has a localy stored High Score section.
 
 ![Game image](assets/readme-images/game.png)
 [Back to top](#contents)

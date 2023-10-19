@@ -77,7 +77,7 @@ a {
   
 }
 
-/* Style the modal */
+/* Style The Modal */
 .modal {
   display: none;
   position: fixed;
@@ -89,7 +89,7 @@ a {
   z-index: 1;
 }
 
-/* Style the modal content */
+/* Style The Modal Content */
 .modal-content {
   background-color: #fff;
   margin: 15% auto;
@@ -99,7 +99,7 @@ a {
   text-align: center;
 }
 
-/* Style the close button */
+/* Style The Close Button */
 .close {
   float: right;
   font-size: 24px;
@@ -111,20 +111,21 @@ a {
   color: red;
 }
 
+/* Style The Buttons */
 .button {
   display: inline-block;
-  padding: 10px 20px; /* Adjust padding as needed */
-  background-color: #ffffff; /* Button background color */
-  color: #000000; /* Text color */
-  text-decoration: none; /* Remove underlines from links */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-  text-shadow: none; /* Remove any text shadow */
+  padding: 10px 20px; 
+  background-color: #ffffff; 
+  color: #000000; 
+  text-decoration: none;
+  border-radius: 5px; 
+  font-weight: bold; 
+  transition: background-color 0.3s ease; 
+  text-shadow: none;
 }
 
 .button:hover {
-  background-color: #cf85bf; /* Darker color on hover */
+  background-color: #cf85bf; 
 }
 
 /* Game Page Styles */
@@ -174,7 +175,7 @@ a {
   padding: 30px;
   margin: 0 auto;
   margin-top: 15px;
-  margin-bottom: 80px; /* Adjust the margin to make room for the footer */
+  margin-bottom: 80px; 
 }
 
 #container-game:hover {
@@ -182,6 +183,7 @@ a {
   transition: transform 0.3s ease;
 }
 
+/* Difficulty Styles for Difficulty Section */
 #difficulty {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -199,8 +201,8 @@ a {
 }
 
 #difficulty::after {
-  content: '\f107'; /* Unicode for a down arrow (you may need to adjust this) */
-  font-family: 'Font Awesome'; /* Use Font Awesome for arrow icons */
+  content: '\f107';
+  font-family: 'Font Awesome';
   position: absolute;
   top: 12px;
   right: 12px;
@@ -342,10 +344,10 @@ ul.result-info {
 }
 
 #highScoresList li::before {
-  content: "🏆"; /* You can use any emoji or icon for a trophy */
+  content: "🏆"; 
   margin-right: 10px;
   font-size: 24px;
-  color: #b81788; /* Trophy color */
+  color: #b81788; 
 }
 
 #highScoresList li span {
@@ -362,7 +364,7 @@ ul.result-info {
 }
 
 #highScoresList li span, #highScoresList li b {
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -400,7 +402,7 @@ ul.result-info {
   color: #138496;
 }
 
-/* Landing Container Styles */
+/* Landing Container Styles For Landing Page */
 .landing-container {
   background: linear-gradient(to bottom, #b817884d, #1384967e);
   display: flex;
