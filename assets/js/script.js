@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // Declare variables at the beginning
 let mistakes = 0; // Variable to track mistakes
 let isTyping = false; // Flag to check if typing is in progress
@@ -89,7 +88,6 @@ if (window.location.pathname.endsWith('game.html')) {
   const maxTime = 60;
   let timeLeft = maxTime;
   let charIndex = (mistakes = isTyping = 0);
-  // eslint-disable-next-line no-unused-vars
   let totalCharacters = 0;
 
   let timerReachedZero = false;
@@ -154,7 +152,7 @@ if (window.location.pathname.endsWith('game.html')) {
     mistakeTag.textContent = `${accuracy.toFixed(2)}%`;
   };
 
-  // Play a timer sound
+  // Play a timer sound when timer hits 0
   const playTimerSound = function() {
     const timerSound = document.getElementById('timerSound');
     timerSound.play();
